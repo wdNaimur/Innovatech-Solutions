@@ -1,0 +1,81 @@
+/* variables  */
+:root {
+  /* Backgrounds */
+  --color-bg-primary: #121417;
+  --color-bg-secondary: #1c2126;
+  --color-bg-button: #0d80f2;
+  --color-bg-button-hover: #0056b3;
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #dddddd;
+  --color-text-hover: #ffffff;
+
+  /* Borders / others */
+  --color-border-light: #3b4754;
+}
+
+/* reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* navbar  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4rem;
+  background-color: var(--color-bg-secondary);
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  cursor: pointer;
+}
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.nav-links {
+  display: flex;
+  gap: 3.2rem;
+  list-style: none;
+  justify-items: center;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.8rem 0.2rem;
+}
+.nav-links a:hover {
+  color: var(--color-text-hover);
+}
+.btn-primary {
+  background-color: var(--color-bg-button);
+  color: var(--color-text-primary);
+  padding: 0.9rem 1.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

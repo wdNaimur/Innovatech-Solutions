@@ -1,9 +1,21 @@
 import './style.css'
 
 document.querySelector('#app').innerHTML = `
-  <div>
-   <h1>Welcome to Innovatech Solutions!</h1>
+  <main>
+    <nav class="navbar">
+    <!-- Left Section -->
+    <div href="#" class="nav-left">
+      <img src="/favicon.png" alt="Logo">
+      <span class="logo-text">Innovatech Solutions</span>
+    </div>
+    <!-- Right Section --> 
+    <ul class="nav-links">
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Solutions</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><button class="btn-primary">Get Started</button></li>
+    </ul>
+  </nav>
   </div>
 `
-
-setupCounter(document.querySelector('#counter'))
