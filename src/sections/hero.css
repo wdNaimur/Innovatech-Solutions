@@ -3,9 +3,12 @@
   width: 100%;
   background: url("/hero-bg.png") no-repeat center center/cover;
   min-height: 48rem;
-  margin-top: 3.6rem;
+  margin-top: 2rem;
   border-radius: 0.8rem;
   z-index: 0;
+}
+.hero-box {
+  padding: 1.6rem;
 }
 
 .hero-overlay {
