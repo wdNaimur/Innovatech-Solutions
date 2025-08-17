@@ -3,6 +3,7 @@
   /* Backgrounds */
   --color-bg-primary: #121417;
   --color-bg-secondary: #1c2126;
+  --color-bg-nav: rgba(18, 20, 23, 0.8);
   --color-bg-button: #0d80f2;
   --color-bg-button-hover: #0056b3;
 
@@ -33,6 +34,9 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   font-family: "Space Grotesk", sans-serif;
+}
+.nav-fix-padding {
+  padding-top: 6.5rem;
 }
 
 /* buttons  */
