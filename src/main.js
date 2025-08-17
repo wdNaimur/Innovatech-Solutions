@@ -21,3 +21,4 @@ loadSection("hero");
 loadSection("keyFeatures");
 loadSection("successStory");
 loadSection("pricingPlans");
+loadSection("footer");
