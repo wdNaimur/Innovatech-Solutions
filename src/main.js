@@ -18,3 +18,4 @@ async function loadSection(targetId) {
 // ✅ Manually load each section
 loadSection("navbar");
 loadSection("hero");
+loadSection("keyFeatures");
