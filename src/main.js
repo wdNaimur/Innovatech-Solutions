@@ -1,21 +1,19 @@
-import './style.css'
+import './style.css'; // global styles
 
-document.querySelector('#app').innerHTML = `
-  <main>
-    <nav class="navbar">
-    <!-- Left Section -->
-    <div href="#" class="nav-left">
-      <img src="/favicon.png" alt="Logo">
-      <span class="logo-text">Innovatech Solutions</span>
-    </div>
-    <!-- Right Section --> 
-    <ul class="nav-links">
-      <li><a href="#">Product</a></li>
-      <li><a href="#">Solutions</a></li>
-      <li><a href="#">Resources</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><button class="btn-primary">Get Started</button></li>
-    </ul>
-  </nav>
-  </div>
-`
+// Utility: load one section manually
+async function loadSection(targetId) {
+  const section = document.getElementById(targetId);
+
+  // Load HTML
+  const res = await fetch(`/src/sections/${targetId}.html`);
+  section.innerHTML = await res.text();
+
+  // Load CSS
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = `/src/sections/${targetId}.css`;
+  document.head.appendChild(link);
+}
+
+// ✅ Manually load each section
+loadSection("navbar");
