@@ -18,7 +18,7 @@
   line-height: 2.8rem;
 }
 
-.card {
+#pricingPlans .card {
   position: relative;
   background-color: var(--color-bg-secondary);
   padding: 2.4rem 2.4rem 2.8rem;
