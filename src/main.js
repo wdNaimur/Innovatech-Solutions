@@ -19,3 +19,4 @@ async function loadSection(targetId) {
 loadSection("navbar");
 loadSection("hero");
 loadSection("keyFeatures");
+loadSection("successStory");
