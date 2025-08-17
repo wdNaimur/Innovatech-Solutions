@@ -5,7 +5,7 @@
   --color-bg-secondary: #1c2126;
   --color-bg-nav: rgba(18, 20, 23, 0.8);
   --color-bg-button: #0d80f2;
-  --color-bg-button-hover: #0056b3;
+  --color-bg-button-hover: #258df3;
   --color-bg-button-secondary: #293038;
 
   /* Text */
@@ -51,6 +51,16 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-bg-button-hover);
+  color: var(--color-text-primary);
+  box-shadow: var(--color-bg-button-hover) 0px 7px 29px 0px;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
 }
 
 /* Base container */
