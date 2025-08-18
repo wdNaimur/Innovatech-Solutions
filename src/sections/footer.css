@@ -7,9 +7,11 @@
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  column-gap: 3rem;
+  row-gap: 1.5rem;
   flex-wrap: wrap;
   margin-bottom: 2.4rem;
+  padding: 0 2rem;
 }
 
 .footer-links a {
