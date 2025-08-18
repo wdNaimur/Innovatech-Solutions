@@ -26,10 +26,8 @@ function initNavbarToggle() {
 
   if (hamburger && mobileNav) {
     hamburger.addEventListener("click", () => {
-      mobileNav.classList.toggle("active");
-
-
-      if (mobileNav.classList.contains("active")) {
+      mobileNav.classList.toggle("show-mobile-nav");
+      if (mobileNav.classList.contains("show-mobile-nav")) {
         hamburger.src = "/close.png";
       } else {
         hamburger.src = "/hamburger-icon.svg";
