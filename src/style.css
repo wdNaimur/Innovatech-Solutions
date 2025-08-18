@@ -36,6 +36,9 @@ body {
   color: var(--color-text-primary);
   font-family: "Space Grotesk", sans-serif;
 }
+section {
+  animation: onLoad 0.8s cubic-bezier(0.25, 0.9, 0.5, 1) forwards;
+}
 .nav-fix-padding {
   padding-top: 6.5rem;
 }
@@ -68,7 +71,7 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem; /* like px-4 */
+  padding-left: 1rem;
   padding-right: 1rem;
 }
 
@@ -101,5 +104,20 @@ body {
   /* 2xl  */
   .container {
     max-width: 1536px;
+  }
+}
+/* onload animation  */
+@keyframes onLoad {
+  0% {
+    transform: translateY(80px) scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
