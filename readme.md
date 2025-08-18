@@ -10,6 +10,25 @@ The project includes multiple sections such as Navbar, Hero, Key Features, Succe
 - **JavaScript (ES6)** – Interactivity and effects
 - **Git & GitHub** – Version control and collaboration
 
+## 🛠️ BulkNest Client – Local Setup Instructions
+
+- **Clone the repository and install dependencies:**
+
+  ```bash
+  git clone https://github.com/wdNaimur/Innovatech-Solutions.git
+  cd Innovatech-Solutions
+  npm install
+  ```
+
+  **Run the development server:**
+
+  ```bash
+  npm run dev
+  ```
+
+- **Access the client site locally at:**  
+  `http://localhost:5173`
+
 ## ✨ Key Features
 
 - Responsive **Navbar** with animations & mobile toggle
