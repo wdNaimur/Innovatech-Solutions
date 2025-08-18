@@ -1,0 +1,122 @@
+.pricing-section {
+  padding-bottom: 2rem;
+}
+.text-box {
+  padding: 2rem 1.6rem 2rem 1.2rem;
+}
+.pricing-table {
+  display: flex;
+  padding: 1.2rem;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  flex: 1 1 18rem;
+}
+
+.pricing-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+}
+
+#pricingPlans .card {
+  position: relative;
+  background-color: var(--color-bg-secondary);
+  padding: 2.4rem 2.4rem 2.8rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#pricingPlans .pro-card::after,
+#pricingPlans .pro-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 0.9rem;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  padding: 3px;
+  background-image: conic-gradient(
+    from var(--angle),
+    var(--color-border-dark) 90%,
+    var(--color-bg-button)
+  );
+  animation: rotate 6s linear infinite;
+}
+
+#pricingPlans .pro-card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+.card h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.card .price {
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  line-height: 3rem;
+}
+
+.card .price span {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.card button {
+  background-color: var(--color-bg-button-secondary);
+  width: 100%;
+  height: 4rem;
+  color: var(--color-text-primary);
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+.card button:hover {
+  background-color: var(--color-bg-button);
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.badge {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  background-color: var(--color-bg-button);
+  color: var(--color-text-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+  font-weight: bold;
+}

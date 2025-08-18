@@ -1,9 +1,46 @@
-import './style.css'
+import './style.css'; // global styles
 
-document.querySelector('#app').innerHTML = `
-  <div>
-   <h1>Welcome to Innovatech Solutions!</h1>
-  </div>
-`
+// Utility: load one section manually
+async function loadSection(targetId) {
+  const section = document.getElementById(targetId);
 
-setupCounter(document.querySelector('#counter'))
+  // Load HTML
+  const res = await fetch(`/src/sections/${targetId}.html`);
+  section.innerHTML = await res.text();
+
+  // Load CSS
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = `/src/sections/${targetId}.css`;
+  document.head.appendChild(link);
+
+  // toggle navbar 
+  if (targetId === "navbar") {
+    initNavbarToggle();
+  }
+}
+
+function initNavbarToggle() {
+  const hamburger = document.querySelector(".hamburger-icon");
+  const mobileNav = document.querySelector(".nav-links-mobile");
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("show-mobile-nav");
+      if (mobileNav.classList.contains("show-mobile-nav")) {
+        hamburger.src = "/close.png";
+      } else {
+        hamburger.src = "/hamburger-icon.svg";
+      }
+    });
+  }
+}
+
+
+// ✅ Manually load each section
+loadSection("navbar");
+loadSection("hero");
+loadSection("keyFeatures");
+loadSection("successStory");
+loadSection("pricingPlans");
+loadSection("footer");

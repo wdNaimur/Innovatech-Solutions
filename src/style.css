@@ -1,0 +1,124 @@
+/* variables  */
+:root {
+  /* Backgrounds */
+  --color-bg-primary: #121417;
+  --color-bg-secondary: #1c2126;
+  --color-bg-nav: rgba(18, 20, 23, 0.8);
+  --color-bg-button: #0d80f2;
+  --color-bg-button-hover: #258df3;
+  --color-bg-button-secondary: #293038;
+  --color-bg-card-hover: rgba(13, 128, 242, 0.05);
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #dddddd;
+  --color-text-tertiary: #9cabba;
+  --color-text-hover: #ffffff;
+
+  /* Borders / others */
+  --color-border-light: #e5e8eb;
+  --color-border-dark: #3b4754;
+}
+
+/* reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: "Space Grotesk", sans-serif;
+}
+section {
+  animation: onLoad 0.8s cubic-bezier(0.25, 0.9, 0.5, 1) forwards;
+}
+.nav-fix-padding {
+  padding-top: 6.5rem;
+}
+
+/* buttons  */
+.btn-primary {
+  background-color: var(--color-bg-button);
+  color: var(--color-text-primary);
+  padding: 0.9rem 1.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-bg-button-hover);
+  color: var(--color-text-primary);
+  box-shadow: var(--color-bg-button-hover) 0px 7px 29px 0px;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Base container */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Breakpoints like Tailwind */
+@media (min-width: 640px) {
+  /* sm */
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  /* md */
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  /* lg */
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  /* xl */
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  /* 2xl  */
+  .container {
+    max-width: 1536px;
+  }
+}
+/* onload animation  */
+@keyframes onLoad {
+  0% {
+    transform: translateY(80px) scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
